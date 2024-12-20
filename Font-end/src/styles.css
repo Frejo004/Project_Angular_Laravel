@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar{
+  overflow-y: auto;
+  scrollbar-color: #009688 #e5eceb;
+  scrollbar-width: thin;
+  overflow-x: none;
+}

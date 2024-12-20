@@ -1,0 +1,13 @@
+<div [ngSwitch]="selectedLanguage" class="flex justify-center mt-5 text-xl">
+  <div *ngSwitchCase="'TypeScript'"> <span class="text-green-600 font-bold" > TypeScript</span> est un sur-ensemble typé de JavaScript.</div>
+  <div *ngSwitchCase="'Swift'"><span class="text-green-600 font-bold" > Swift</span> est un langage de programmation pour iOS et macOS.</div>
+  <div *ngSwitchCase="'Kotlin'"><span class="text-green-600 font-bold" > Kotlin</span> est utilisé principalement pour le développement Android.</div>
+  <div *ngSwitchCase="'Go (Golang)'"><span class="text-green-600 font-bold" > Go</span> est connu pour sa simplicité et ses performances.</div>
+  <div *ngSwitchCase="'Ruby'"><span class="text-green-600 font-bold" > Ruby</span> est souvent utilisé dans le développement web avec Rails.</div>
+  <div *ngSwitchCase="'PHP'"><span class="text-green-600 font-bold" > PHP</span> est largement utilisé pour le développement web côté serveur.</div>
+  <div *ngSwitchCase="'C++'"><span class="text-green-600 font-bold" > C++</span> est un langage orienté objet très performant.</div>
+  <div *ngSwitchCase="'Java'"><span class="text-green-600 font-bold" > Java</span> est utilisé dans une variété d'applications, y compris Android.</div>
+  <div *ngSwitchCase="'Python'"><span class="text-green-600 font-bold" > Python</span> est connu pour sa simplicité et sa lisibilité.</div>
+  <div *ngSwitchCase="'JavaScript'"><span class="text-green-600 font-bold" > JavaScript</span> est essentiel pour le développement web moderne.</div>
+  <div *ngSwitchDefault>Sélectionnez un langage pour en savoir plus.</div>
+</div>

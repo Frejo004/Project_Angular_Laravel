@@ -1,0 +1,5 @@
+<!-- {{tasksGroupList|json}} -->
+
+<div class="flex flex-wrap justify-center gap-[30px] h-[730px] mb-2 scrollbar">
+  <app-task-group *ngFor="let tasksGroup of tasksGroupList" [tasksGroup]="tasksGroup" (newTask)="addTasksInGroups($event)" ></app-task-group>
+</div>

@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<div class="text-center">
+  <div class="flex mt-3 justify-center gap-[30px]">
+      <app-search-task></app-search-task>
+      <button routerLink="/ajout-groupe" class="rounded-md bg-green-600 py-2 px-4 border-48 border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+        Ajouter un nouveau groupe
+      </button>
+  </div>
+  <div >
+      <app-task-group-list></app-task-group-list>
+  </div>
+</div>

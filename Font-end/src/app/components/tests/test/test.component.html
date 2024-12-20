@@ -1,0 +1,19 @@
+<p class="text-center font-bold underline my-5" *ngIf="showLanguages" [ngClass]="showLanguages ? 'text-4xl text-blue-600' : ''" >
+
+  Listes des langages de programmation
+</p>
+<app-display-list-languages [listLanguages]="languages" (sendLanguage)="selectedLanguage = $event" />
+<!-- <div class="flex justify-center mt-5" >
+  <ul>
+    <li *ngFor="let language of languages; let i = index"
+    [ngClass]="{
+      'font-bold text-green-600' : activeLanguages.includes(language),
+      'text-gray-400' : !activeLanguages.includes(language)
+    }"
+    >
+      {{i + 1}}- {{language}}
+    </li>
+  </ul>
+</div> -->
+<app-display-detail-language [selectedLanguage]="selectedLanguage"></app-display-detail-language>
+

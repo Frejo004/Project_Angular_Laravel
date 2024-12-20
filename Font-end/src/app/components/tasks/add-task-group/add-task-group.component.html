@@ -1,0 +1,22 @@
+<div class="container mx-auto p-4">
+    <h2 class="text-2xl font-bold mb-4">Ajouter un nouveau groupe de tâches</h2>
+    <form [formGroup]="taskGroupForm" (ngSubmit)="onSubmit()" class="space-y-4">
+      <div>
+        <label for="titreGroupTasks" class="block text-sm font-medium text-gray-700">Titre du groupe :</label>
+        <input id="titreGroupTasks" formControlName="titreGroupTasks" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+      </div>
+  
+      <div>
+        <label for="tasks" class="block text-sm font-medium text-gray-700">Tâches :</label>
+        <button type="button" (click)="addTask()" class="mt-2 mb-4 px-4 py-2 bg-blue-500 text-white rounded">Ajouter une tâche</button>
+        <div formArrayName="tasks" *ngFor="let task of tasks.controls; let i = index" class="space-y-2">
+          <div [formGroupName]="i" class="flex items-center space-x-2">
+            <input placeholder="Titre de la tâche" formControlName="titreTask" required class="flex-1 border-gray-300 rounded-md shadow-sm" />
+            <button type="button" (click)="removeTask(i)" class="px-2 py-1 bg-red-500 text-white rounded">Supprimer</button>
+          </div>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="taskGroupForm.invalid" class="px-4 py-2 bg-green-500 text-white rounded">Ajouter</button>
+    </form>
+  </div>
